@@ -1,0 +1,51 @@
+.backImage {
+    background-image: linear-gradient(90deg, #070b1263, #0000006e), url(/assets/images/bg1.jpg);
+}
+
+.work:hover .work-descript {
+    visibility: visible;
+}
+
+/* Mobile */
+.menus {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .menus.show {
+        width: 100%;
+        display: flex !important;
+        justify-content: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    .menus.show ul {
+        background-color: rgba(0, 0, 0, 0.637);
+        width: 60%;
+        gap: 0;
+        padding: 5rem 0;
+        height: 100%;
+    }
+
+    .menus.show ul li {
+        border: 1px solid transparent;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .menus.show ul li a {
+        padding: 15px 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .menus.show ul li:hover {
+        border: 1px solid #10db74;
+        border-left: 0;
+        border-right: 0;
+
+    }
+}
