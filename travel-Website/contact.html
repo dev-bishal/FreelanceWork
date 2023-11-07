@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <title>Travel Website</title>
+
+</head>
+
+<body>
+    <header class="relative">
+        <nav class=" z-10 w-full top-0 left-0 ">
+            <div class="wrapper relative flex justify-between items-end gap-3 px-10 lg:px-24 py-5">
+                <div class="logo">
+                    <span class="logoTitle font-bold text-2xl">
+                        <a href="/">
+                            <img class="h-16" src="assets/images/logo.png" alt="">
+                        </a>
+                    </span>
+                </div>
+                <div class="menuButton z-[5] absolute right-10">
+                    <i class="block lg:hidden fa-solid fa-bars cursor-pointer text-2xl "></i>
+                </div>
+                <div
+                    class="menus ease-in-out transition duration-150 show translate-x-full lg:translate-x-0 backdrop-blur-sm lg:backdrop-blur-0  lg:flex lg:justify-between w-[90%]">
+                    <ul class="flex py-4 lg:py-0 gap-28 font-semibold flex-col lg:flex-row">
+                        <li onclick="closeMenu()" class="hover:bg-[#1c1c1c8f] lg:hover:bg-transparent hover:font-bold cursor-pointer font-bold"><a href="#">Home</a>
+                        </li>
+                        <li onclick="closeMenu()" class="hover:bg-[#1c1c1c8f] lg:hover:bg-transparent hover:font-bold cursor-pointer"><a href="#">Guides</a>
+                        </li>
+                        <li onclick="closeMenu()" class="hover:bg-[#1c1c1c8f] lg:hover:bg-transparent hover:font-bold cursor-pointer"><a href="#">Flights</a>
+                        </li>
+                        <li onclick="closeMenu()" class="hover:bg-[#1c1c1c8f] lg:hover:bg-transparent hover:font-bold cursor-pointer"><a href="#">About</a></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="border-2 bg-blue-700 lg:bg-transparent mx-3 text-center rounded-md border-black px-7 py-1 hover:bg-blue-700 hover:text-white">Contact
+                        Us</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <section class="hero flex w-full lg:flex-row bg-[#e9e7e7]">
+        <div class="wrapper px-10 lg:px-24 gap-16 flex w-full flex-col lg:flex-row py-16">
+            <div class="part w-full lg:w-[40%] flex flex-col gap-4 lg:pr-16">
+                <span class="heading block text-6xl pb-5">
+                    Be Updated!
+                </span>
+
+                <div class="formContainer flex flex-col gap-5">
+                    <input class="bg-transparent border-2 border-black rounded-md p-2 text-gray-700" type="text"
+                        placeholder="First Name*">
+                    <input class="bg-transparent border-2 border-black rounded-md p-2 text-gray-700" type="text"
+                        placeholder="Last Name*">
+                    <input class="bg-transparent border-2 border-black rounded-md p-2 text-gray-700" type="email"
+                        placeholder="Email Subject*">
+                    <textarea class="bg-transparent border-2 border-black rounded-md p-2 text-gray-700" name="" id=""
+                        cols="30" rows="10" placeholder="Write something here*"></textarea>
+
+                    <a href="#"
+                        class="border-2 text-center rounded-sm border-black px-8 py-3 bg-[#232323] hover:bg-blue-700 font-medium text-white">Submit
+                        Email</a>
+                </div>
+
+            </div>
+            <div class="part w-full lg:w-[60%] ">
+                <img class="max-h-[620px] w-full" src="assets/images/contactImage.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="flex justify-center items-center text-center p-5 font-semibold bg-[#c4c4c4]">
+        <span class="text-center">
+            &copy; My Log Travels. All Right Reserved.
+        </span>
+    </footer>
+    
+    <button id="waterMBtn"
+        class="fixed bottom-0 right-0 border-2 z-20 rounded-md border-black px-7 py-1 bg-gray-800 text-white">Watermark</button>
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
