@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Johnathan Wick - Software Developer Portfolio</title>
     <meta name="description" content="">
 </head>
@@ -17,7 +17,7 @@
             <div class="wrapper relative flex justify-between items-center px-10 py-5 text-white">
                 <div class="logo">
                     <span class="logoTitle font-bold text-2xl">
-                        <a href="/ClientDemo/Software-Developer-Portfolio/">Johnathan Wick</a>
+                        <a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/">Johnathan Wick</a>
                     </span>
                 </div>
                 <div class="menuButton z-20 absolute right-10">
@@ -25,11 +25,11 @@
                 </div>
                 <div class="menus lg:block">
                     <ul class="flex gap-9 font-semibold flex-col lg:flex-row">
-                        <li onclick="closeMenu()" class="cursor-pointer"><a href="/ClientDemo/Software-Developer-Portfolio/">Home</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/">Home</a></li>
                         <li onclick="closeMenu()" class="cursor-pointer"><a href="#aboutMe">About Me</a></li>
                         <li onclick="closeMenu()" class="cursor-pointer"><a href="#services">Services</a></li>
                         <li onclick="closeMenu()" class="cursor-pointer"><a href="#Work">Portfolio</a></li>
-                        <li onclick="closeMenu()" class="cursor-pointer"><a href="/ClientDemo/Software-Developer-Portfolio/contact.html">Contact Me</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="/contact.html">Contact Me</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,9 +52,9 @@
 
                 <span class="callToActionBtns flex gap-3">
                     <a class="border-[#10db74] border text-white rounded-md px-3 py-2 hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl"
-                        href="">My Resume</a>
+                        href="#Work">My Work</a>
                     <a class="border-[#10db74] border text-white rounded-md px-3 py-2 hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl"
-                        href="">Contact Me</a>
+                        href="/contact.html">Contact Me</a>
                 </span>
             </div>
         </div>
@@ -62,7 +62,7 @@
     <div id="aboutMe" class="fade h-[50px] w-full absolute translate-y-[-20px]"
         style="background-image: linear-gradient(179deg, #0210197d, #0210198a, #021019);"></div>
     <section class="aboutMe-skills-section bg-[#021019] w-full">
-        <div class="wrapper flex justify-between flex-col  p-10 text-white">
+        <div class="wrapper flex justify-between flex-col pb-16 p-10 text-white">
             <h2 class="text-4xl border-b border-[#10db74] py-2 w-fit">About</h2>
             <p class="text-lg pt-6">👋 Hello! I'm <span class="highlight-text font-semibold text-[#10db74]">Johnathan
                     Wick</span>, a passionate and highly skilled software developer with a strong foundation in creating
@@ -74,67 +74,122 @@
                 .NET. My journey began with a curiosity-driven interest in coding, and it has evolved into a thriving
                 career dedicated to building cutting-edge software solutions.</p>
 
+            <div class="Experience flex justify-center items-center flex-col">
+                <h2 class="text-4xl border-b border-[#10db74] py-2 w-fit">Experience</h2>
+                <p class="text-lg pt-6">Some of the <span class="highlight-text font-semibold text-[#10db74]">Biggest Tech companies</span>, I have worked with</p>
+
+                <div class="companies-container flex justify-center flex-wrap gap-2 pt-5 w-full lg:w-7/12">
+                    
+<ol class="relative mb-10 border-l border-gray-200 dark:border-gray-700">                  
+    <li class="mb-10 ml-6 py-1.5 pl-2 pr-3 rounded-md ring-1 ring-slate-800 hover:ring-slate-900 hover:bg-slate-700">            
+        <span class="absolute flex items-center justify-center w-6 h-6 ring-[#021019] ring-8 bg-[#10db74] rounded-full -left-3 ">
+            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+        </span>
+
+        <div class="company-data pt-4 flex gap-2">
+            <a class="contents" target="_blank" href="https://socialmarketing90.com/">
+                <img class="h-[50px] w-[50px] object-contain" alt="socialmarketing90-Logo" src="assets/images/comp1.png">
+            </a>
+            <span>
+                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Senior Backend Engineer at <a target="_blank" href="https://socialmarketing90.com/" class="highlight-text font-semibold text-[#10db74]">Socialmarketing90</a></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">From 1st January 2022</time>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">responsible for designing, building, and maintaining the server side of web applications. Responsible in developing concepts for backend that communicates with the frontend, sending and receiving information to be displayed as a web page.</p>
+            </span>
+        </div>
+    </li>
+    
+    <li class="mb-10 ml-6 py-1.5 pl-2 pr-3 rounded-md ring-1 ring-slate-800 hover:ring-slate-900 hover:bg-slate-700">
+        <span class="absolute flex items-center justify-center w-6 h-6 ring-[#021019] ring-8 bg-[#10db74] rounded-full -left-3 ">
+            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+        </span>
+        <div class="company-data pt-4 flex gap-2">
+            <a class="contents" target="_blank" href="https://www.oracle.com/">
+                <img class="h-[50px] w-[50px] object-contain" alt="oracle logo" src="assets/images/comp2.png">
+            </a>
+            <span>
+                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Senior Web Developer at <a target="_blank" href="https://www.oracle.com/" class="highlight-text font-semibold text-[#10db74]">Oracle</a></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">From 1st May 2020, Till December 7th, 2021</time>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">As an Email and Web Developer, I was a member of the expert services team where I was expected to provide leadership both as an individual and a team member.</p>
+            </span>
+        </div>
+    </li>
+    
+    <li class="ml-6 py-1.5 pl-2 pr-3 rounded-md ring-1 ring-slate-800 hover:ring-slate-900 hover:bg-slate-700">
+        <span class="absolute flex items-center justify-center w-6 h-6 ring-[#021019] ring-8 bg-[#10db74] rounded-full -left-3 ">
+            <svg class="w-2.5 h-2.5 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+            </svg>
+        </span>
+        <div class="company-data pt-4 flex gap-2">
+            <a class="contents" target="_blank" href="https://www.cisco.com/">
+                <img class="h-[50px] w-[50px] object-contain" alt="cisco logo" src="assets/images/comp3.png">
+            </a>
+            <span>
+                <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">CyberSecurity Sales Specialist at <a target="_blank" href="https://www.cisco.com/" class="highlight-text font-semibold text-[#10db74]">Cisco</a></h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">From 15th August 2015, Till April 10th, 2021</time>
+                <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">I was a part of a team that worked in the areas like Cloud adaption, Advanced Analytics, AI, IOT, Block chain & Robotic Process Automation, Information Security are key building block towards this transformation.</p>
+            </span>
+        </div>
+    </li>
+</ol>
+
+                </div>
+            </div>
             <div class="skills flex justify-center items-center flex-col">
                 <h2 class="text-4xl border-b border-[#10db74] py-2 w-fit">My Skills</h2>
                 <div class="skills-container flex justify-center flex-wrap gap-2 pt-5 w-full lg:w-7/12">
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg1.png">
                         <p>C Sharp</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://runcode.io/_next/image?url=https%3A%2F%2Fruncode-app-public.s3.amazonaws.com%2Fimages%2Fpngegg.original.png&w=1080&q=75">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg2.png">
                         <p>ASP.Net</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg3.png">
                         <p>Java</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://cdn.springpeople.com/media/JSP%20and%20Servle.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg4.png">
                         <p>JSP</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg5.png">
                         <p>PHP</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg6.png">
                         <p>.NET Core</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://www.pragimtech.com/wp-content/uploads/2020/03/blazor-tutorial-for-beginners.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg7.png">
                         <p>Blazor</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://www.pngmart.com/files/21/Spring-Logo-PNG-HD-Isolated.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg8.png">
                         <p>Spring Boot</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://envision.com.np/wp-content/uploads/2018/01/laravel-logo.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg9.png">
                         <p>Laravel</p>
                     </span>
                     <span
                         class="skill flex items-center flex-col justify-center rounded-md border-gray-800 bg-gray-800 border h-[120px] w-[150px] p-5 text-white cursor-pointer hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl">
-                        <img class="h-[80%] object-contain"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png">
+                        <img class="h-[80%] object-contain" src="/assets/images/prg10.png">
                         <p>Wordpress</p>
                     </span>
                 </div>
@@ -149,43 +204,65 @@
             <h2 class="text-4xl border-b border-[#10db74] py-2 w-fit">Services</h2>
             <div class="services-container flex flex-wrap gap-5 w-full pt-6 p-0 lg:px-28">
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Custom Web Application Development</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Custom Web Application
+                        Development</p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-solid fa-code"></i>
                         From concept to deployment, I can design and build custom web
                         applications tailored to your specific needs. Whether it's a dynamic e-commerce platform, a
                         content management system, or a data-driven dashboard, I create responsive, user-friendly, and
-                        scalable web solutions.</p>
+                        scalable web solutions.
+                    </p>
                 </span>
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Full-Stack Development</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Full-Stack Development
+                    </p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-brands fa-react"></i>
-                        Need a developer who can handle both front-end and back-end tasks seamlessly? I'm your go-to full-stack developer. I have expertise in JavaScript, React, Node.js, Python, Django, and more, ensuring a well-rounded approach to your project.</p>
+                        Need a developer who can handle both front-end and back-end tasks seamlessly? I'm your go-to
+                        full-stack developer. I have expertise in JavaScript, React, Node.js, Python, Django, and more,
+                        ensuring a well-rounded approach to your project.
+                    </p>
                 </span>
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Mobile App Development</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Mobile App Development
+                    </p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-solid fa-mobile"></i>
-                        In the mobile-first world, having a presence on smartphones is essential. I specialize in developing mobile applications for both Android and iOS platforms. Let me turn your app idea into a reality, complete with an intuitive user interface and robust functionality.</p>
+                        In the mobile-first world, having a presence on smartphones is essential. I specialize in
+                        developing mobile applications for both Android and iOS platforms. Let me turn your app idea
+                        into a reality, complete with an intuitive user interface and robust functionality.
+                    </p>
                 </span>
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Code Review and Optimization</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Code Review and
+                        Optimization</p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-solid fa-user-magnifying-glass"></i>
-                        Struggling with slow performance or buggy code? I offer code review and optimization services to ensure your software runs efficiently. I'll identify bottlenecks, improve code quality, and enhance overall system performance.</p>
+                        Struggling with slow performance or buggy code? I offer code review and optimization services to
+                        ensure your software runs efficiently. I'll identify bottlenecks, improve code quality, and
+                        enhance overall system performance.
+                    </p>
                 </span>
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Consultation and Technical Guidance</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Consultation and
+                        Technical Guidance</p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-solid fa-person-walking-arrow-loop-left"></i>
-                        Whether you're in the early planning stages or facing technical challenges, I can provide expert guidance. I'll help you make informed decisions about technology stacks, architecture, and best practices, ensuring a solid foundation for your project.</p>
+                        Whether you're in the early planning stages or facing technical challenges, I can provide expert
+                        guidance. I'll help you make informed decisions about technology stacks, architecture, and best
+                        practices, ensuring a solid foundation for your project.
+                    </p>
                 </span>
                 <span class="flex flex-col rounded-md p-5 w-full lg:w-[48%] bg-gray-800 border">
-                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Open-Source Contributions</p>
+                    <p class="serviceTitle text-lg highlight-text font-semibold text-[#10db74]">Open-Source
+                        Contributions</p>
                     <p class="serviceDescription text-base flex gap-2">
                         <i class="text-[#10db74] text-4xl pt-7 fa-solid fa-code-fork"></i>
-                        Giving back to the community is important to me. I can contribute to open-source projects, whether it's by submitting bug fixes, adding new features, or improving documentation. Let's collaborate to enhance the open-source ecosystem.</p>
+                        Giving back to the community is important to me. I can contribute to open-source projects,
+                        whether it's by submitting bug fixes, adding new features, or improving documentation. Let's
+                        collaborate to enhance the open-source ecosystem.
+                    </p>
                 </span>
             </div>
         </div>
@@ -197,83 +274,95 @@
         <div class="wrapper flex justify-between items-center flex-col  p-10 text-white">
             <h2 class="text-4xl border-b border-[#10db74] py-2 w-fit">Portfolio</h2>
             <div class="work-container w-full justify-center lg:w-[80%] pt-6 flex flex-wrap gap-5">
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://cdn.dribbble.com/userupload/3702592/file/still-4b14a42880d628eb1b09c2ecbdf2e3fb.png?resize=320x240&vertical=center">
-                    
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://cdn.dribbble.com/userupload/3702592/file/still-4b14a42880d628eb1b09c2ecbdf2e3fb.png?resize=320x240&vertical=center">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">Blockchain Website</p>
                         <p>A Crypto Currency Landing Page...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
-                
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://assets.materialup.com/uploads/9d3296bc-192a-4430-9a5e-1184fe4a8e19/preview.png">
-                    
+
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://assets.materialup.com/uploads/9d3296bc-192a-4430-9a5e-1184fe4a8e19/preview.png">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">Real Estate Website</p>
                         <p>Full Stack Website...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
 
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://www.freecodecamp.org/news/content/images/2023/08/APIs.jpg">
-                    
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://www.freecodecamp.org/news/content/images/2023/08/APIs.jpg">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">API Development</p>
                         <p>API for Stock Market...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
 
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/315938165/original/e93ee2d2381208295735a327691fe24d49ba6a79.jpg">
-                    
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/315938165/original/e93ee2d2381208295735a327691fe24d49ba6a79.jpg">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">Amazon Scraper</p>
                         <p>A Amazon Scrapper to get...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
 
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://repository-images.githubusercontent.com/204526164/9d459400-d702-11e9-9f72-bbaa9a4b1649">
-                    
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://repository-images.githubusercontent.com/204526164/9d459400-d702-11e9-9f72-bbaa9a4b1649">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">Custom Blog Website</p>
                         <p>A Blog Website with Wordpress...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
 
-                <span class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
-                    <img class="w-full h-full rounded-md  object-cover" src="https://camo.githubusercontent.com/b73aae9127e113246fb1665d2002922e0bbcecd74bcbe5fbcd42e2b7eb2d6006/68747470733a2f2f696d6775722e636f6d2f675145646f64332e706e67">
-                    
+                <span
+                    class="work cursor-pointer flex justify-between flex-wrap relative w-full lg:w-[32%] h-[235px] hover:shadow-lg hover:shadow-[#10db74]">
+                    <img class="w-full h-full rounded-md  object-cover"
+                        src="https://camo.githubusercontent.com/b73aae9127e113246fb1665d2002922e0bbcecd74bcbe5fbcd42e2b7eb2d6006/68747470733a2f2f696d6775722e636f6d2f675145646f64332e706e67">
+
                     <div class="work-descript absolute flex flex-col gap-1 justify-end w-full h-full p-3 bg-gradient-to-t
                     from-[#254264a1] to-[#050a0ea8] invisible">
                         <p class="work-title font-semibold">Team Management Mobile App</p>
                         <p>An Android app for managing a team...</p>
-                        <a class="border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
-                        href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
+                        <a class="hidden border-[#10db74] border text-white rounded-md px-3 w-fit bg-[#10db74]"
+                            href="">Open <i class="fa-solid fa-up-right pr-3"></i></a>
                     </div>
                 </span>
-                
+
             </div>
-            
+
             <div class="flex justify-center items-center py-5">
-                <a class="border-[#10db74] border text-white rounded-md px-3 py-2 hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl"
-                        href="">Load More</a>
+                <a class="hidden border-[#10db74] border text-white rounded-md px-3 py-2 hover:bg-[#10db74] hover:shadow-[#10db74] hover:shadow-2xl"
+                    href="">Load More</a>
             </div>
         </div>
     </section>
