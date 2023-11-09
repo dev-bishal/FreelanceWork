@@ -14,23 +14,23 @@
 <body>
     <header class="relative">
         <nav class="fixed backdrop-blur-sm border-b border-gray-600 z-10 w-full top-0 left-0 ">
-            <div class="wrapper flex justify-between items-center px-10 py-5 text-white">
+            <div class="wrapper relative flex justify-between items-center px-10 py-5 text-white">
                 <div class="logo">
                     <span class="logoTitle font-bold text-2xl">
-                        <a href="/">Johnathan Wick</a>
+                        <a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/">Johnathan Wick</a>
                     </span>
                 </div>
-                <div class="menuButton">
+                <div class="menuButton z-20 absolute right-10">
                     <i class="block lg:hidden fa-solid fa-bars cursor-pointer text-2xl text-white"></i>
-                    <div class="menus hidden lg:block">
-                        <ul class="flex gap-9 font-semibold flex-col lg:flex-row">
-                            <li class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/">Home</a></li>
-                            <li class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/#aboutMe">About Me</a></li>
-                            <li class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/#services">Services</a></li>
-                            <li class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/#Work">Portfolio</a></li>
-                            <li class="cursor-pointer"><a href="#">Contact Me</a></li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="menus lg:block">
+                    <ul class="flex gap-9 font-semibold flex-col lg:flex-row">
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/Software-Developer-Portfolio/">Home</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/#aboutMe">About Me</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/#services">Services</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="https://dev-bishal.github.io/ClientDemo/#Work">Portfolio</a></li>
+                        <li onclick="closeMenu()" class="cursor-pointer"><a href="#">Contact Me</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
