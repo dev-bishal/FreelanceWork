@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Brandverse Where Your Social Presence Soars!</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="assets/styles/custom-style.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="relative w-full bg-white text-blue-800 font-semibold border-b border-gray-400 shadow-xl">
+        <div class="wrapper w-full relative p-4 lg:px-20 flex justify-between">
+            <div class="left-sec my-auto">
+                <a href="/" class="logo">
+                    <img src="assets/images/logo.png" class="h-10" alt="">
+                </a>
+            </div>
+            <div class="middle-sec my-auto hidden lg:block">
+                <nav>
+                    <ul class="flex gap-14">
+                        <li class="cursor-pointer hover:text-green-600"><a href="/">Home</a></li>
+                        <li class="cursor-pointer relative hover:text-green-600 withSubMenu">
+                            <a href="javascript:void(0)">Services</a>
+                            <i class="fa-solid fa-angle-down text-xs"></i>
+                            <ul class="submenu absolute bg-gray-100 z-20 w-max h-max shadow-2xl invisible">
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Reach with SEO</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Brand Popularity</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Social Media Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Content Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white "><a class="block p-3"
+                                        href="javascript:void(0)">Website
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="hover:text-green-600 cursor-pointer"><a
+                                href="/">Testimonials</a></li>
+                        <li class="hover:text-green-600 cursor-pointer"><a href="/">About
+                                Us</a></li>
+                        <li class="hover:text-green-600 cursor-pointer"><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-sec my-auto hidden lg:block">
+                <nav>
+                    <ul class="flex items-center gap-14">
+                        <li class="hidden cursor-pointer "><a href="javascript:void(0)">Log in</a></li>
+                        <li class="cursor-pointer px-4 py-2 rounded-full bg-gradient-to-r from-lime-400 to-green-600" onclick="triggerLightBox('form')"><a >Register Now</a></li>
+                    </ul>
+                    <!-- <ul class="flex gap-4 border-l border-gray-500 pl-4">
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-sun"></i></span></li>
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-moon"></i></span></li>
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></span></li>
+                  </ul> -->
+                </nav>
+            </div>
+            <div class="menuButton z-20 absolute right-10">
+                <i class="block lg:hidden fa-solid fa-bars cursor-pointer text-2xl text-black"></i>
+            </div>
+            <div
+                class="mobileNav lg:hidden bg-[#00000063] invisible overflow-hidden fixed top-0 right-0 shadow-lg w-full h-screen flex justify-end z-30">
+                <nav class="flex flex-col overflow-auto gap-7 py-16 bg-white w-[70%] h-full translate-x-full">
+                    <ul class="flex flex-col">
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="/">Home</a></li>
+                        <li
+                            class="border-b border-gray-700 relative flex justify-center items-center flex-col withSubMenuResponsive">
+                            <a class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="javascript:void(0)">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+                            <ul class="submenuResponsive bg-gray-100 z-20 h-0 w-[90%] shadow-2xl invisible">
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Reach with SEO</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Brand Popularity</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Social Media Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Content Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white "><a class="block p-3"
+                                        href="javascript:void(0)">Website
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="/">Testimonials</a></li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="/">About Us</a></li>
+                        <li class=""><a class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                            onclick="bringToView('header')" >Contact Us</a></li>
+                    </ul>
+
+                    <ul class="flex flex-col items-center">
+                        <li class="hidden"><a href="javascript:void(0)">Log in</a></li>
+                        <li class="px-4 py-2 rounded-full bg-gradient-to-r from-lime-400 to-green-600"><a
+                            onclick="triggerLightBox('form')">Register Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- page header -->
+    <section
+        class="relative flex justify-center items-center h-[50vh] bg-center bg-[url('assets/images/bg-banner.jpg')]  w-full">
+        <div class="overlay z-0 absolute w-full h-full bg-[url('assets/images/bg.png')] opacity-75 bg-[#008715]"></div>
+        <div class="banner-content z-10">
+            <h1 class="font-bold text-5xl text-white">Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="contact-data  bg-[#e7fde7]">
+        <div class="wrapper p-4 lg:px-20 gap-5 w-full flex flex-col lg:flex-row justify-between">
+            <div class="left w-full lg:w-1/2 side flex gap-3 items-start justify-center flex-col">
+                <span class="ContentHeading text-xl uppercase">
+                    Contact us
+                </span>
+                <span class="ContentHeading text-4xl font-extrabold capitalize">
+                    Feel free to Contact & Get in Touch!
+                </span>
+                <span class="ContentPara">
+                    Your connection with us is just a click away. Whether you have inquiries, require assistance, or want to explore how Brandverse can transform your digital presence, we're here for you. Our dedicated team is eager to listen and collaborate, turning your vision into reality. Feel free to reach out through the form below, drop us an email, or connect via phone. We look forward to the opportunity to assist you on your journey to digital success.
+                </span>
+
+                <a
+                class="p-3 flex items-center gap-5 border border-dashed border-green-500 rounded-full w-full" 
+                href="">
+                    <i class="h-5 w-5 bg-white p-5 flex justify-center items-center rounded-full fa-light fa-envelopes-bulk"></i>
+                    <span class="flex gap-1 flex-col">
+                        <span class="font-bold">Email Address:</span>
+                        <span>support@brandverse.com</span>
+                    </span>
+                </a>
+                <a
+                class="p-3 flex items-center gap-5 border border-dashed border-green-500 rounded-full w-full" 
+                href="">
+                    <i class="h-5 w-5 bg-white p-5 flex justify-center items-center rounded-full fa-solid fa-phone"></i>
+                    <span class="flex gap-1 flex-col">
+                        <span class="font-bold">Phone Number:</span>
+                        <span>+(001) 987654321 / +(001) 123456789</span>
+                    </span>
+                </a>
+                <a
+                class="p-3 flex items-center gap-5 border border-dashed border-green-500 rounded-full w-full" 
+                href="">
+                    <i class="h-5 w-5 bg-white p-5 flex justify-center items-center rounded-full fa-solid fa-location-dot"></i>
+                    <span class="flex gap-1 flex-col">
+                        <span class="font-bold">Location:</span>
+                        <span>23rd Street, West Road, Los Angelos</span>
+                    </span>
+                </a>
+            </div>
+            <div class="right w-full lg:w-1/2 side flex gap-3">
+                <div class="sections w-full flex gap-3 flex-col">
+                    <input type="text" class="bg-white rounded-full w-full p-3" placeholder="Full Name *">
+                    <input type="email" class="bg-white rounded-full w-full p-3" placeholder="Email Address *">
+                    <input type="text" class="bg-white rounded-full w-full p-3" placeholder="Subject">
+                    <textarea class="bg-white rounded-lg w-full p-3 h-40" placeholder="Your Message" name="" id=""></textarea>
+                    <button class="border-[#10db74] border text-white rounded-full px-3 py-2 bg-[#10db74] hover:bg-[#368f63] hover:shadow-[#10db74] hover:shadow-2xl w-fit">Submit Message</button>
+                </div>
+            </div>
+        </div>
+        <iframe class="gmap_iframe" width="100%" height="350px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?height=350&amp;hl=en&amp;q=taj mahal agra&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="bottom-footer rounded-t-lg bg-gradient-to-br from-[#22c55e44] to-[#64a30d5b] bg-black">
+        <div class="wrapper p-10 lg:px-20 w-full flex justify-center">
+            <div class="bottom-links w-full flex-col lg:flex-row gap-5 lg:gap-0 flex justify-between ">
+                <div class="left side flex flex-col gap-3">
+                    <img src="assets/images/logo.png" alt="Brandverse logo" class="h-16 w-fit">
+                    <span class="text-white font-semibold">Ready to grow your business</span>
+                    <ul class="flex gap-5">
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right side flex flex-col lg:flex-row gap-5 lg:gap-14 text-white w-full justify-between lg:justify-center lg:w-fit hidden">
+                    <ul>
+                        <li><a href="javascript:void(0)">How we work</a></li>
+                        <li><a href="javascript:void(0)">Our Services</a></li>
+                        <li><a href="javascript:void(0)">Happy Customers</a></li>
+                        <li><a href="javascript:void(0)">Partner with Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="javascript:void(0)">Invest</a></li>
+                        <li><a href="javascript:void(0)">Partners</a></li>
+                        <li><a href="javascript:void(0)">Marketplace</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="javascript:void(0)">About us</a></li>
+                        <li><a href="javascript:void(0)">Career</a></li>
+                        <li><a href="javascript:void(0)">Contact</a></li>
+                        <li><a href="javascript:void(0)">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer
+            class="lg:px-20 gap-2 flex-col-reverse lg:flex-row border-t border-gray-400 flex justify-between items-center p-3 lg:p-5 text-gray-400">
+            <span>
+                &copy; 2023 Brandverse Limited. All Rights Reserved.
+            </span>
+            <ul class="flex gap-5 w-full lg:w-[33%] justify-center text-white font-semibold hidden">
+                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+            </ul>
+            <ul class="flex gap-5 w-full lg:w-[33%] justify-center lg:justify-end text-white font-semibold">
+                <li class="hidden"><a href="javascript:void(0)">Log in</a></li>
+                <li class="cursor-pointer"><a onclick="triggerLightBox('form')">Register</a></li>
+            </ul>
+        </footer>
+
+        <a class="fixed cursor-pointer z-40 bottom-6 right-6 h-10 w-10 rounded-full border-2 border-green-400 bg-green-700 text-white flex justify-center items-center opacity-0 hover:shadow-xl hover:shadow-green-400"
+            onclick="bringToView('header')" id="BackToTop"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <div
+        class="lightbox bg-[#000000ad] backdrop-blur-md z-50 fixed top-0 left-0 w-full h-screen justify-center items-center hidden">
+        <div onclick="triggerLightBox()"
+            class="closeBtn absolute right-0 top-0 cursor-pointer hover:bg-[#7a2020] bg-[#d34d4d] text-white w-10 h-10 flex justify-center items-center">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="modalContent YTvid rounded-lg shadow-lg justify-center items-center bg-white hidden">
+            <iframe width="560" height="315" data-src="https://www.youtube.com/embed/-tdFvJLw2UQ?si=DI0o5awRRGZ9u5Bs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="modalContent form p-10 w-[90%] lg:w-1/2 rounded-lg shadow-lg justify-center items-center bg-white hidden">
+
+            <form class="w-full">
+                <span class="heading text-xl text-center font-bold">
+                    Make an Account
+                </span>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="name@flowbite.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        required>
+                </div>
+                <div class="flex items-start mb-6">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value=""
+                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
+                            required>
+                    </div>
+                    <label for="remember" class="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                </div>
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>

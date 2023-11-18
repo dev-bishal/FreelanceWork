@@ -1,0 +1,70 @@
+.withSubMenu:hover .submenu {
+    visibility: visible;
+}
+
+.submenuResponsive.show {
+    height: max-content;
+    visibility: visible;
+}
+
+.withSubMenuResponsive,
+.mobileNav nav {
+    transition: 150ms all ease-in-out;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+swiper-container {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide .brandImg {
+    display: block;
+    height: 90%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+
+/*-----------------------------------*/
+
+swiper-container.mySwiper2 {
+    width: 100%;
+    height: 450px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-container.mySwiper2 swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+swiper-container.mySwiper2 swiper-slide img {
+    display: block;
+}

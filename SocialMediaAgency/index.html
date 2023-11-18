@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Brandverse Where Your Social Presence Soars!</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="assets/styles/custom-style.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="relative w-full bg-white text-blue-800 font-semibold border-b border-gray-400 shadow-xl">
+        <div class="wrapper w-full relative p-4 lg:px-20 flex justify-between">
+            <div class="left-sec my-auto">
+                <a href="/" class="logo">
+                    <img src="assets/images/logo.png" class="h-10" alt="">
+                </a>
+            </div>
+            <div class="middle-sec my-auto hidden lg:block">
+                <nav>
+                    <ul class="flex gap-14">
+                        <li class="cursor-pointer hover:text-green-600"><a href="javascript:void(0)">Home</a></li>
+                        <li class="cursor-pointer relative hover:text-green-600 withSubMenu">
+                            <a href="javascript:void(0)">Services</a>
+                            <i class="fa-solid fa-angle-down text-xs"></i>
+                            <ul class="submenu absolute bg-gray-100 z-20 w-max h-max shadow-2xl invisible">
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Reach with SEO</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Brand Popularity</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Social Media Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Content Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white "><a class="block p-3"
+                                        href="javascript:void(0)">Website
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="hover:text-green-600 cursor-pointer"><a
+                                onclick="bringToView('.testimonials')">Testimonials</a></li>
+                        <li class="hover:text-green-600 cursor-pointer"><a onclick="bringToView('.partners')">About
+                                Us</a></li>
+                        <li class="hover:text-green-600 cursor-pointer"><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-sec my-auto hidden lg:block">
+                <nav>
+                    <ul class="flex items-center gap-14">
+                        <li class="hidden cursor-pointer "><a href="javascript:void(0)">Log in</a></li>
+                        <li class="cursor-pointer px-4 py-2 rounded-full bg-gradient-to-r from-lime-400 to-green-600" onclick="triggerLightBox('form')"><a >Register Now</a></li>
+                    </ul>
+                    <!-- <ul class="flex gap-4 border-l border-gray-500 pl-4">
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-sun"></i></span></li>
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-moon"></i></span></li>
+                      <li><span class="cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></span></li>
+                  </ul> -->
+                </nav>
+            </div>
+            <div class="menuButton z-20 absolute right-10">
+                <i class="block lg:hidden fa-solid fa-bars cursor-pointer text-2xl text-black"></i>
+            </div>
+            <div
+                class="mobileNav lg:hidden bg-[#00000063] invisible overflow-hidden fixed top-0 right-0 shadow-lg w-full h-screen flex justify-end z-30">
+                <nav class="flex flex-col overflow-auto gap-7 py-16 bg-white w-[70%] h-full translate-x-full">
+                    <ul class="flex flex-col">
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="javascript:void(0)">Home</a></li>
+                        <li
+                            class="border-b border-gray-700 relative flex justify-center items-center flex-col withSubMenuResponsive">
+                            <a class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="javascript:void(0)">Services <i class="fa-solid fa-angle-down text-xs"></i></a>
+                            <ul class="submenuResponsive bg-gray-100 z-20 h-0 w-[90%] shadow-2xl invisible">
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Reach with SEO</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Brand Popularity</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Social Media Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white border-b border-gray-700"><a
+                                        class="block p-3" href="javascript:void(0)">Content Management</a></li>
+                                <li class="hover:bg-green-600 hover:text-white "><a class="block p-3"
+                                        href="javascript:void(0)">Website
+                                        Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                onclick="bringToView('.testimonials')">Testimonials</a></li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                onclick="bringToView('.partners')">About Us</a></li>
+                        <li class=""><a class="hover:bg-green-600 hover:text-white  p-3 block w-full"
+                                href="/contact.html">Contact Us</a></li>
+                    </ul>
+
+                    <ul class="flex flex-col items-center">
+                        <li class="hidden"><a href="javascript:void(0)">Log in</a></li>
+                        <li class="px-4 py-2 rounded-full bg-gradient-to-r from-lime-400 to-green-600"><a
+                            onclick="triggerLightBox('form')">Register Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative p-4 bg-gradient-to-r from-lime-400 to-green-600 w-full">
+        <div class="wrapper  flex justify-between">
+            <div class="content flex flex-col lg:flex-row gap-2 w-full">
+                <div class="left w-[32%] relative select-none hidden lg:flex">
+                    <img src="assets/images/img_01.png" class="h-[500px]">
+                    <img src="assets/images/img_04.png"
+                        class="h-60 absolute top-0 right-0 translate-x-16 -translate-y-4">
+                </div>
+                <div class="middle lg:w-[32%] w-full flex justify-center items-center flex-col gap-6 z-10">
+                    <span class="heading text-5xl text-center font-bold">
+                        Brandverse Where Your Social Presence Soars!
+                    </span>
+                    <span class="text text-center">
+                        Are you ready to elevate your brand's digital footprint and captivate your audience? At
+                        Brandverse, we specialize in crafting compelling social media strategies that transcend the
+                        ordinary.
+                    </span>
+
+                    <div class="cta-holder flex justify-between items-center flex-wrap gap-2">
+                        <button class="hover:bg-slate-300 text-lg rounded-full border py-2 px-3">Get Started <i
+                                class="fa-solid fa-circle-right"></i></button>
+                        <button onclick="triggerLightBox('YTVid')"
+                            class="hover:bg-slate-300 text-lg rounded-full border py-2 px-3">HOW WE WORK <i
+                                class="fa-solid fa-circle-play"></i></button>
+                    </div>
+                </div>
+                <div class="right lg:w-[32%] w-full flex justify-center items-center">
+                    <img src="assets/images/seo-analysis.webp">
+                </div>
+            </div>
+        </div>
+        <div class="bottomShape absolute bottom-0 left-0 w-full">
+            <img src="assets/images/hero-bottom.png" class="w-full  h-[150px]">
+        </div>
+    </section>
+
+    <!-- Carousal -->
+    <div class="brands-carousals px-10 bg-white">
+        <swiper-container class="mySwiper" space-between="30" free-mode="true" slides-per-view="7" loop="true"
+            autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <!--   -->
+
+            <swiper-slide><img class="brandImg" src="assets/images/br1.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br2.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br3.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br4.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br5.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br6.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br7.webp"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br8.png"></swiper-slide>
+            <swiper-slide><img class="brandImg" src="assets/images/br9.png"></swiper-slide>
+        </swiper-container>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="about bg-white text-white">
+        <div class="wrapper p-4 lg:px-20 flex justify-between items-center">
+            <div
+                class=" pb-4 px-8 content flex-col lg:flex-row rounded-md bg-[#026024d9] backdrop-blur-sm bg-[url('/assets/images/bg.png')] flex gap-2">
+                <div class="mt-4 textContent w-full lg:w-1/4 flex flex-col gap-4 bg-black rounded p-5 ">
+                    <span class="Contentheader text-xl font-extrabold">
+                        Why Choose Us
+                    </span>
+                    <span class="ContentPara">
+                        At Brandverse, we understand that the heart of any successful social media campaign lies
+                        in authenticity, creativity, and strategic thinking. Here's why partnering with us is your key
+                        to social media success:
+                    </span>
+                    <button
+                        class="uppercase hover:bg-green-900 bg-green-700 border-green-400 text-base rounded-full border py-2 px-3 w-fit">More
+                        Benifits <i class="fa-solid fa-circle-right"></i></button>
+                </div>
+
+                <div
+                    class="hover:backdrop-blur-sm p-2 flex justify-center items-center text-center flex-col gap-5 counter-container w-full lg:w-1/4 rounded-br-lg rounded-bl-lg hover:border-green-400 hover:bg-green-600">
+                    <span class="iconContainer rounded bg-white p-6">
+                        <i class="fasr fa-desktop text-5xl text-[#026024d9]"></i>
+                    </span>
+                    <span class="Contentheader text-xl font-extrabold">
+                        Social Media Marketting
+                    </span>
+                    <span class="ContentPara">
+                        At Brandverse, we specialize in catapulting your social presence to new heights. Our
+                        strategic prowess, creative finesse, and data-driven insights converge to unlock the full
+                        potential of your brand on social platforms.
+                    </span>
+                </div>
+
+                <div
+                    class="hover:backdrop-blur-sm p-2 flex justify-center items-center text-center flex-col gap-5 counter-container w-full lg:w-1/4 rounded-br-lg rounded-bl-lg hover:border-green-400 hover:bg-green-600">
+                    <span class="iconContainer rounded bg-white p-6">
+                        <i class="fa-solid fa-arrow-up-right-dots text-5xl text-[#026024d9]"></i>
+                    </span>
+                    <span class="Contentheader text-xl font-extrabold">
+                        Online Reach
+                    </span>
+                    <span class="ContentPara">
+                        Brandverse is your gateway to expanding your digital footprint. Through targeted
+                        strategies, compelling content, and a deep understanding of your audience, we ensure that your
+                        brand doesn't just exist online but resonates, captivates, and extends its reach far and wide.
+                    </span>
+                </div>
+
+                <div
+                    class="hover:backdrop-blur-sm p-2 flex justify-center items-center text-center flex-col gap-5 counter-container w-full lg:w-1/4 rounded-br-lg rounded-bl-lg hover:border-green-400 hover:bg-green-600">
+                    <span class="iconContainer rounded bg-white p-6">
+                        <i class="fa-solid fa-pen-nib text-5xl text-[#026024d9]"></i>
+                    </span>
+                    <span class="Contentheader text-xl font-extrabold">
+                        Content Management
+                    </span>
+                    <span class="ContentPara">
+                        Content is more than words and visuals; it's the heartbeat of your brand. At Brandverse,
+                        we take the reins of your content management, ensuring that every piece tells a compelling story
+                        and resonates with your audience.
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Partner Section -->
+    <div class="partners bg-white">
+        <div class="wrapper flex justify-between items-center">
+            <div
+                class="content p-10 lg:px-20 text-center bg-blue-200 rounded-3xl w-full flex justify-center items-center flex-col gap-5">
+                <span class="title text-xl uppercase">
+                    How we work
+                </span>
+                <span class="ContentHeading text-4xl font-extrabold ">
+                    We guarentee your online <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">business</span>
+                    will be sky rocket
+                </span>
+                <span class="ContentPara ">
+                    At Brandverse, collaboration is at the heart of our success. We take pride in our network of
+                    esteemed partners who have joined us on the journey to redefine digital excellence. Together, we
+                    form a dynamic alliance, pooling our expertise and resources to bring you unparalleled solutions.
+                    From industry leaders to emerging innovators, our partners reflect the diversity and strength that
+                    propels us forward. Join the ranks of those who have chosen to elevate their brand alongside ours.
+                </span>
+                <div class="expertiseSection flex justify-center items-center gap-2 flex-wrap">
+
+                    <div class="expert w-full lg:w-[45%] p-4 pr-0 bg-white rounded-md flex">
+                        <div class="part w-1/2 flex flex-col items-start text-left gap-2">
+                            <span class="Contentheader text-xl font-bold">
+                                Seasoned Professionals
+                            </span>
+
+                            <span class="ContentPara">
+                                Our team comprises seasoned marketing professionals with a proven track record. With
+                                years of collective experience, we navigate the nuances of the marketing landscape with
+                                finesse, staying ahead of trends and mastering the art of effective communication.
+                            </span>
+                        </div>
+                        <div class="part w-1/2 ">
+                            <img class="rounded-full rounded-r-none h-[250px] w-full border border-r-0 p-3 pr-0 border-dashed object-cover"
+                                src="assets/images/expert (3).jpg">
+                        </div>
+                    </div>
+
+                    <div class="expert w-full lg:w-[45%] p-4 pl-0 bg-white rounded-md flex flex-row-reverse">
+                        <div class="part w-1/2 flex flex-col items-start text-left gap-2">
+                            <span class="Contentheader text-xl font-bold">
+                                Holistic Approach
+                            </span>
+
+                            <span class="ContentPara">
+                                Marketing isn't just about promoting a product; it's about crafting a narrative that
+                                resonates with your audience. We take a holistic approach, considering every aspect of
+                                your brand to create cohesive, impactful campaigns that leave a lasting impression.
+                            </span>
+                        </div>
+                        <div class="part w-1/2 ">
+                            <img class="rounded-full rounded-l-none h-[250px] w-full border border-l-0 p-3 pl-0 border-dashed object-cover"
+                                src="assets/images/expert (2).jpg">
+                        </div>
+                    </div>
+
+                    <div class="expert w-full lg:w-[45%] p-4 pr-0 bg-white rounded-md flex">
+                        <div class="part w-1/2 flex flex-col items-start text-left gap-2">
+                            <span class="Contentheader text-xl font-bold">
+                                Innovative Strategies
+                            </span>
+
+                            <span class="ContentPara">
+                                The marketing landscape is ever-evolving, and we thrive on staying ahead of the curve.
+                                Our experts are adept at crafting innovative strategies that leverage the latest
+                                technologies and trends, ensuring your brand remains not just relevant but a trendsetter
+                                in your industry.
+                            </span>
+                        </div>
+                        <div class="part w-1/2 ">
+                            <img class="rounded-full rounded-r-none h-[250px] w-full border border-r-0 p-3 pr-0 border-dashed object-cover"
+                                src="assets/images/expert (4).jpg">
+                        </div>
+                    </div>
+
+                    <div class="expert w-full lg:w-[45%] p-4 pl-0 bg-white rounded-md flex flex-row-reverse">
+                        <div class="part w-1/2 flex flex-col items-start text-left gap-2">
+                            <span class="Contentheader text-xl font-bold">
+                                Client-Centric Approach
+                            </span>
+
+                            <span class="ContentPara">
+                                Your satisfaction is our priority. We work closely with you to understand your goals,
+                                challenges, and aspirations. Our client-centric approach ensures that every campaign
+                                aligns seamlessly with your vision, fostering a partnership that goes beyond business.
+                            </span>
+                        </div>
+                        <div class="part w-1/2 ">
+                            <img class="rounded-full rounded-l-none h-[250px] w-full border border-l-0 p-3 pl-0 border-dashed object-cover"
+                                src="assets/images/expert (5).jpg">
+                        </div>
+                    </div>
+
+                </div>
+                <span class="title text-xl uppercase">
+                    We are working with
+                </span>
+                <div class="workingWith text-white flex gap-5 flex-wrap justify-center items-center">
+                    <div
+                        class="rounded-xl withBrand w-full lg:w-[32%] p-5 flex justify-center items-center flex-col gap-2 bg-gradient-to-r from-green-600 to-lime-400">
+                        <a href="https://www.trustpilot.com/" target="_blank" class="flex flex-col items-center">
+                            <span class="Contentheader text-xl font-extrabold">
+                                Trust Pilot
+                            </span>
+                            <img src="assets/images/trustpilot.svg" class="h-20 w-40 object-contain">
+                        </a>
+                        <span class="ContentPara">
+                            A Digital platform that brings businesses and consumers together to foster trust and inspire
+                            collaboration. We're free to use, open to everybody, and built on transparency.
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="rounded-xl withBrand w-full lg:w-[32%] p-5 flex justify-center items-center flex-col gap-2 bg-gradient-to-r from-blue-900 to-purple-800">
+                        <a href="https://support.google.com/business/answer/3474122?hl=en" target="_blank" class="flex flex-col items-center">
+                            <span class="Contentheader text-xl font-extrabold">
+                                Google Business and Reviews
+                            </span>
+                            <img src="assets/images/google.png" class="h-20 w-40 object-contain">
+                        </a>
+                        <span class="ContentPara">
+                            Learn about the comprehensive list of service software's Google Business Solutions provides
+                            to help with data analysis, advertising, and site performance.
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="rounded-xl withBrand w-full lg:w-[32%] p-5 flex justify-center items-center flex-col gap-2 bg-gradient-to-r from-green-600 to-lime-400">
+                        <a href="https://socialmarketing90.com/" target="_blank" class="flex flex-col items-center">
+                            <span class="Contentheader text-xl font-extrabold">
+                                socialmarketing90
+                            </span>
+                            <img src="https://socialmarketing90.com/wp-content/uploads/2022/04/sm90-official-logo-2022-182x63.png"
+                                class="h-20 w-40 object-contain">
+                        </a>
+                        <span class="ContentPara">
+                            SocialMarketing90 offers cutting-edge tools for online content creation. Additionally, their
+                            robust support team, providing SEO services, makes it easier for startup companies.
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Counter Section -->
+    <div class="counter-section py-4 flex flex-wrap gap-3 justify-between items-center">
+        <div class="wrapper p-4 lg:px-20 w-full gap-2 flex-wrap lg:gap-0 flex justify-center lg:justify-between">
+
+            <div
+                class="counter flex w-[48%] lg:w-[30%] items-center gap-5 p-2 lg:p-4 border border-gray-300 hover:border-gray-400 hover:shadow-xl rounded-md">
+                <span
+                    class="icon bg-green-600 text-white text-xl lg:text-3xl flex justify-center items-center p-2 lg:p-4 w-12 h-12 lg:w-24 lg:h-24 rounded-md ">
+                    <i class="fa-sharp fa-solid fa-list-check"></i>
+                </span>
+                <span class="data flex flex-col">
+                    <span class="bigData text-3xl lg:text-5xl">
+                        1K+
+                    </span>
+                    <span class="title text-xl uppercase">
+                        Projects Completed
+                    </span>
+                </span>
+            </div>
+
+            <div
+                class="counter flex w-[48%] lg:w-[30%] items-center gap-5 p-2 lg:p-4 border border-gray-300 hover:border-gray-400 hover:shadow-xl rounded-md">
+                <span
+                    class="icon bg-green-600 text-white text-xl lg:text-3xl flex justify-center items-center p-2 lg:p-4 w-12 h-12 lg:w-24 lg:h-24 rounded-md ">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                </span>
+                <span class="data flex flex-col">
+                    <span class="bigData text-3xl lg:text-5xl">
+                        750+
+                    </span>
+                    <span class="title text-xl uppercase">
+                        Satisfied Clients
+                    </span>
+                </span>
+            </div>
+
+            <div
+                class="counter flex w-[48%] lg:w-[30%] items-center gap-5 p-2 lg:p-4 border border-gray-300 hover:border-gray-400 hover:shadow-xl rounded-md">
+                <span
+                    class="icon bg-green-600 text-white text-xl lg:text-3xl flex justify-center items-center p-2 lg:p-4 w-12 h-12 lg:w-24 lg:h-24 rounded-md ">
+                    <i class="fa-solid fa-earth-americas"></i>
+                </span>
+                <span class="data flex flex-col">
+                    <span class="bigData text-3xl lg:text-5xl">
+                        15+
+                    </span>
+                    <span class="title text-xl uppercase">
+                        Global Support
+                    </span>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials p-4">
+        <div class="wrapper p-4 px-5 lg:px-20 w-full flex justify-between items-center flex-col">
+            <span class="title text-xl uppercase">
+                Happy Customers
+            </span>
+
+            <span class="ContentHeading text-2xl lg:text-4xl font-bold lg:font-extrabold ">
+                Trusted by <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">750+</span>
+                businesses.
+            </span>
+
+            <span class="ContentHeading text-xl lg:text-4xl font-extrabold ">
+                Here's what they say
+            </span>
+
+            <swiper-container class="mySwiper2" pagination="true" autoplay="true" effect="coverflow" grab-cursor="true"
+                centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="50" loop="true"
+                coverflow-effect-stretch="0" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+                coverflow-effect-slide-shadows="true">
+                <swiper-slide>
+                    <div class="card p-5 flex flex-col justify-center items-center gap-4">
+                        <span class="reviewComment border-b border-gray-400 text-sm italic">
+                            Brandverse has been a game-changer for my business! The tools they provide for content
+                            creation are top-notch, and their support team's SEO services have significantly boosted our
+                            online visibility. A must-have for any startup!
+                            <div class="reviewRating flex py-5 text-green-600">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </span>
+                        <div class="reviewer w-full flex justify-between items-center text-left">
+                            <span class="author flex flex-col">
+                                <span class="text-lg font-bold">Eva M.</span>
+                                <span class="text-xs">Marketing Manager</span>
+                            </span>
+
+                            <img src="assets/images/review (1).jpg"
+                                class="h-14 w-14 border-2 border-green-500  rounded-full">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="card p-5 flex flex-col justify-center items-center gap-4">
+                        <span class="reviewComment border-b border-gray-400 text-sm italic">
+                            Great platform! The modern tools make content creation a breeze. The SEO services have
+                            improved our ranking, although a bit more explanation on how to maximize their potential
+                            would be helpful. Overall, a solid choice.
+                            <div class="reviewRating flex py-5 text-green-600">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>
+                        </span>
+                        <div class="reviewer w-full flex justify-between items-center text-left">
+                            <span class="author flex flex-col">
+                                <span class="text-lg font-bold">Jason B.</span>
+                                <span class="text-xs">Operations Coordinator</span>
+                            </span>
+
+                            <img src="assets/images/review (2).jpg"
+                                class="h-14 w-14 border-2 border-green-500  rounded-full">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="card p-5 flex flex-col justify-center items-center gap-4">
+                        <span class="reviewComment border-b border-gray-400 text-sm italic">
+                            Brandverse is a lifesaver for my social media strategy. The tools are user-friendly, and
+                            their support team is responsive and knowledgeable. I've seen a remarkable growth in
+                            engagement and reach since using their services!
+                            <div class="reviewRating flex py-5 text-green-600">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </span>
+                        <div class="reviewer w-full flex justify-between items-center text-left">
+                            <span class="author flex flex-col">
+                                <span class="text-lg font-bold">Sophie K.</span>
+                                <span class="text-xs">Social Media Specialist</span>
+                            </span>
+
+                            <img src="assets/images/review (3).jpg"
+                                class="h-14 w-14 border-2 border-green-500  rounded-full">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="card p-5 flex flex-col justify-center items-center gap-4">
+                        <span class="reviewComment border-b border-gray-400 text-sm italic">
+                            Impressive tools for content creation! The learning curve was minimal, and the SEO services
+                            complement the package well. It's a valuable resource for startups looking to establish a
+                            strong online presence.
+                            <div class="reviewRating flex py-5 text-green-600">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                            </div>
+                        </span>
+                        <div class="reviewer w-full flex justify-between items-center text-left">
+                            <span class="author flex flex-col">
+                                <span class="text-lg font-bold">Alex R.</span>
+                                <span class="text-xs">Content Development Lead</span>
+                            </span>
+
+                            <img src="assets/images/review (4).jpg"
+                                class="h-14 w-14 border-2 border-green-500  rounded-full">
+                        </div>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="card p-5 flex flex-col justify-center items-center gap-4">
+                        <span class="reviewComment border-b border-gray-400 text-sm italic">
+                            Couldn't be happier with Brandverse! The tools provided have elevated our content game, and
+                            the SEO services have given us a competitive edge. The support team is fantastic – prompt
+                            and always ready to assist. Highly recommend!
+                            <div class="reviewRating flex py-5 text-green-600">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </span>
+                        <div class="reviewer w-full flex justify-between items-center text-left">
+                            <span class="author flex flex-col">
+                                <span class="text-lg font-bold">Olivia S. </span>
+                                <span class="text-xs">Brand Ambassador</span>
+                            </span>
+
+                            <img src="assets/images/review (5).jpg"
+                                class="h-14 w-14 border-2 border-green-500  rounded-full">
+                        </div>
+                    </div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
+
+    </div>
+
+    <!-- Bottom Links Section -->
+    <div class="newsletter bg-blue-100">
+        <div class="wrapper p-10 lg:px-20 w-full flex justify-center">
+            <div class="newsletter-container w-full  flex justify-center items-center flex-col gap-4">
+                <span class="title text-xl uppercase">
+                    Get updates on your mailbox
+                </span>
+                <span class="ContentHeading text-4xl font-extrabold ">
+                    Daily <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">Newsletter</span>
+                </span>
+
+                <div class="newsletter-form w-full lg:w-fit ">
+                    <div aria-label="form" class="flex flex-col lg:flex-row gap-5">
+                        <span class="flex relative items-center">
+                            <i class="absolute pl-4 fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Email Address" class="rounded-md p-2 pl-10 w-full ">
+                        </span>
+                        <button
+                            class="hover:bg-green-600 bg-green-500 font-bold text-white text-lg rounded-md border py-2 px-3">Sign
+                            Up <i class="fa-solid fa-circle-right"></i></button>
+                    </div aria-label="form">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="bottom-footer rounded-t-lg bg-gradient-to-br from-[#22c55e44] to-[#64a30d5b] bg-black">
+        <div class="wrapper p-10 lg:px-20 w-full flex justify-center">
+            <div class="bottom-links w-full flex-col lg:flex-row gap-5 lg:gap-0 flex justify-between ">
+                <div class="left side flex flex-col gap-3">
+                    <img src="assets/images/logo.png" alt="Brandverse logo" class="h-16 w-fit">
+                    <span class="text-white font-semibold">Ready to grow your business</span>
+                    <ul class="flex gap-5">
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="#"><i
+                                    class="flex text-4xl fa-brands text-[#10db74] hover:text-white fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right side flex flex-col lg:flex-row gap-5 lg:gap-14 text-white w-full justify-between lg:justify-center lg:w-fit hidden">
+                    <ul>
+                        <li><a href="javascript:void(0)">How we work</a></li>
+                        <li><a href="javascript:void(0)">Our Services</a></li>
+                        <li><a href="javascript:void(0)">Happy Customers</a></li>
+                        <li><a href="javascript:void(0)">Partner with Us</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="javascript:void(0)">Invest</a></li>
+                        <li><a href="javascript:void(0)">Partners</a></li>
+                        <li><a href="javascript:void(0)">Marketplace</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="javascript:void(0)">About us</a></li>
+                        <li><a href="javascript:void(0)">Career</a></li>
+                        <li><a href="javascript:void(0)">Contact</a></li>
+                        <li><a href="javascript:void(0)">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer
+            class="lg:px-20 gap-2 flex-col-reverse lg:flex-row border-t border-gray-400 flex justify-between items-center p-3 lg:p-5 text-gray-400">
+            <span>
+                &copy; 2023 Brandverse Limited. All Rights Reserved.
+            </span>
+            <ul class="flex gap-5 w-full lg:w-[33%] justify-center text-white font-semibold hidden">
+                <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+            </ul>
+            <ul class="flex gap-5 w-full lg:w-[33%] justify-center lg:justify-end text-white font-semibold">
+                <li class="hidden"><a href="javascript:void(0)">Log in</a></li>
+                <li class="cursor-pointer"><a onclick="triggerLightBox('form')">Register</a></li>
+            </ul>
+        </footer>
+
+        <a class="fixed cursor-pointer z-40 bottom-6 right-6 h-10 w-10 rounded-full border-2 border-green-400 bg-green-700 text-white flex justify-center items-center opacity-0 hover:shadow-xl hover:shadow-green-400"
+            onclick="bringToView('header')" id="BackToTop"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <div
+        class="lightbox bg-[#000000ad] backdrop-blur-md z-50 fixed top-0 left-0 w-full h-screen justify-center items-center hidden">
+        <div onclick="triggerLightBox()"
+            class="closeBtn absolute right-0 top-0 cursor-pointer hover:bg-[#7a2020] bg-[#d34d4d] text-white w-10 h-10 flex justify-center items-center">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="modalContent YTvid rounded-lg shadow-lg justify-center items-center bg-white hidden">
+            <iframe width="560" height="315" data-src="https://www.youtube.com/embed/-tdFvJLw2UQ?si=DI0o5awRRGZ9u5Bs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="modalContent form p-10 w-[90%] lg:w-1/2 rounded-lg shadow-lg justify-center items-center bg-white hidden">
+
+            <form class="w-full">
+                <span class="heading text-xl text-center font-bold">
+                    Make an Account
+                </span>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="name@flowbite.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        required>
+                </div>
+                <div class="flex items-start mb-6">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value=""
+                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
+                            required>
+                    </div>
+                    <label for="remember" class="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                </div>
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
