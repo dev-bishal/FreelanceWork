@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Blackhatter99</title>
+</head>
+
+<body>
+    <div
+        class="preloader fixed h-screen w-screen flex justify-center items-center bg-gradient-to-br from-[#330f0f] to-[#020835] z-20 transition-all delay-500 ease-in-out">
+        <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px">
+            <defs>
+                <linearGradient id="pl-grad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#000" />
+                    <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+                <mask id="pl-mask">
+                    <rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
+                </mask>
+            </defs>
+            <g stroke-linecap="round" stroke-width="8" stroke-dasharray="32 32">
+                <g stroke="hsl(193,90%,50%)">
+                    <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
+                    <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
+                    <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
+                    <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
+                    <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
+                    <g transform="rotate(180,79,64)">
+                        <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
+                    </g>
+                    <g transform="rotate(180,94,64)">
+                        <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
+                    </g>
+                    <g transform="rotate(180,109,64)">
+                        <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
+                    </g>
+                    <g transform="rotate(180,124,64)">
+                        <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
+                    </g>
+                </g>
+                <g stroke="hsl(283,90%,50%)" mask="url(#pl-mask)">
+                    <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
+                    <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
+                    <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
+                    <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
+                    <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
+                    <g transform="rotate(180,79,64)">
+                        <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
+                    </g>
+                    <g transform="rotate(180,94,64)">
+                        <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
+                    </g>
+                    <g transform="rotate(180,109,64)">
+                        <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
+                    </g>
+                    <g transform="rotate(180,124,64)">
+                        <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <!-- Header bg-[#c5793b96]-->
+    <header class="fixed text-white border-b border-gray-400 w-full backdrop-blur-sm z-10 ">
+        <div class="wrapper p-4 lg:px-24 flex justify-between">
+            <div class="nav-left flex items-center gap-4">
+                <a href="" class="logo">
+                    <img src="assets/images/logo.png" class="h-10" alt="">
+                </a>
+            </div>
+
+            <div class="relative nav-right flex items-center lg:w-[90%]">
+                <div class="menuButton absolute right-0 z-40">
+                    <i class="block lg:hidden fa-solid fa-bars cursor-pointer text-2xl "></i>
+                    <i class="block lg:hidden fa-solid fa-xmark cursor-pointer text-2xl hidden"></i>
+                </div>
+                <nav class="lg:flex gap-4 lg:w-full justify-between items-center hidden absolute">
+                    <ul class="flex gap-10 uppercase font-semibold">
+                        <li class="menuLinks cursor-pointer"><a onclick="bringToView('.hero')">Home</a></li>
+                        <li class="menuLinks cursor-pointer"><a onclick="bringToView('.about')">About</a></li>
+                        <li class="menuLinks cursor-pointer"><a onclick="bringToView('.services')">Services</a></li>
+                        <li class="menuLinks cursor-pointer"><a onclick="bringToView('.contact-section')">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="flex gap-4 border-l items-center border-gray-500 pl-4">
+                        <li
+                            class="menuLinks cursor-pointer border hover:bg-orange-500 hover:text-blue-800 p-2 rounded-full border-purple-800 animate-[ripple]">
+                            <a onclick="triggerLightBox('form')">Create Account</a>
+                        </li>
+                        <li onclick="triggerCart('')"><span class="cursor-pointer"><i
+                                    class="fa-solid fa-cart-shopping"></i></span></li>
+                    </ul>
+                </nav>
+
+                <nav class="mobileNav fixed top-0 right-0 flex flex-col overflow-auto gap-7 py-16 w-[70%] h-screen backdrop-blur-sm bg-[#2f153ded] z-30 translate-x-full  transition-all delay-500 ease-in-out">
+                    <ul class="flex flex-col">
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-[#121c63] hover:text-white  p-3 block w-full"
+                                onclick="bringToView('.hero')">Home</a></li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-[#121c63] hover:text-white  p-3 block w-full"
+                                onclick="bringToView('.about')">About</a></li>
+                        <li class="border-b border-gray-700"><a
+                                class="hover:bg-[#121c63] hover:text-white  p-3 block w-full"
+                                onclick="bringToView('.services')">Services</a></li>
+                        <li class=""><a class="hover:bg-[#121c63] hover:text-white  p-3 block w-full"
+                            onclick="bringToView('.contact-section')">Contact</a></li>
+                    </ul>
+
+                    <ul class="flex gap-2 justify-center items-center">
+                        <li class="hidden"><a href="javascript:void(0)">Log in</a></li>
+                        <li class="px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-semibold"><a
+                                onclick="triggerLightBox('form')">Create Account</a></li>
+                        <li onclick="triggerCart('')"><span class="cursor-pointer"><i
+                                    class="fa-solid fa-cart-shopping"></i></span></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section
+        class="hero bg-[#0e0e31] bg-[url('assets/images/hero-bg.webp')] bg-blend-luminosity bg-right-top bg-no-repeat">
+
+        <div
+            class="wrapper overflow-hidden bg-gradient-to-tr from-[#a70707] to-[#121c63] p-4 lg:px-24 h-full pt-20 flex justify-between items-center flex-col-reverse lg:flex-row lg:gap-5">
+            <div data-aos-delay="3000" data-aos="fade-right" class="left part w-full lg:w-1/2 px-5 text-white">
+                <swiper-container class="mySwiper mb-5 lg:mb-10" autoplay="true" autoplay-delay="4000" loop="true">
+                    <swiper-slide>
+                        <div class="swiper-content flex justify-center items-start gap-3 flex-col">
+                            <span class=" font-bold text-3xl">Get Rapid Traffic</span>
+                            <span class=" font-semibold text-xl">Instantly Rank your new website/blog with my never
+                                known strategies.</span>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="swiper-content flex justify-center items-start gap-3 flex-col">
+                            <span class=" font-bold text-3xl">Buy Instagram Follower</span>
+                            <span class=" font-semibold text-xl">Get 10000 followers instantly after taking our
+                                Instagram Plan starting at just $0.99</span>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="swiper-content flex justify-center items-start gap-3 flex-col">
+                            <span class=" font-bold text-2xl">YouTube Subscribers</span>
+                            <span class=" font-semibold text-lg">Get 5000 subscribers along with likes and Comments at just $49.99</span>
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
+
+                <span class="content-para block  mb-5">
+                    <span class="font-semibold text-base">Blackhatter99</span> is the Most <span
+                        class="font-semibold text-blue-500">Reliable</span> Panel on the market with <span
+                        class="font-semibold text-orange-400">1,226,708</span> Orders until now
+                </span>
+
+                <button
+                    class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-3 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Get
+                    Started Now</button>
+
+                <div class="reviews w-full">
+                    <img src="assets/images/reviews3.png" class="h-20">
+                    <span class="capitalize">based on <span class="text-green-500 font-semibold">17,000+</span> reviews
+                    </span>
+                </div>
+            </div>
+            <div data-aos-delay="3000" data-aos="fade-left" class="right hidden md:block part w-full lg:w-1/2">
+                <swiper-container class="mySwiper mb-10" autoplay="true" loop="true">
+                    <swiper-slide>
+                        <img src="assets/images/hero1.png" class="max-h-fit">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="assets/images/hero.png" class="max-h-fit">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img src="assets/images/hero2.png" class="max-h-fit">
+                    </swiper-slide>
+                </swiper-container>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About us -->
+    <section class="about bg-gradient-to-br from-[#a70707] to-[#121c63] text-white">
+        <div class="wrapper p-4 lg:px-24 h-full flex-col pt-10 flex justify-between items-center lg:gap-5">
+
+            <div data-aos="fade-up" class="aboutw-full mt-2 bg-[#0000001f] p-4">
+                <span class="text-5xl font-bold capitalize w-full block text-center mb-5">About <span
+                        class=" text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400">Blackhatter99</span></span>
+                <p class="leading-7 font-medium text-lg mb-3 text-justify">
+                    Welcome to Blackhatter99, where innovation meets digital excellence. I am passionate about SEO and
+                    Social Media Marketing (SMM) experts dedicated to propelling businesses to new heights in the online
+                    landscape. At Blackhatter99, I believe in the transformative power of strategic SEO and SMM. In a
+                    world where
+                    digital presence is non-negotiable, our mission is to empower businesses of all sizes to thrive in
+                    the ever-evolving online sphere.
+                </p>
+                <p class="leading-7 font-medium text-lg mb-3 text-justify">
+                    I have personally grew multiple Instagram, Facebook Pages and Accounts over the last few years and I
+                    know how the algorithm works. Grew my followers count to millions multiple times. With that said I
+                    have also polished my skills with SEO. My website Blackhatter99 and many others blogs have been
+                    ranking on Google and other search engines continuously for last 2-3 years without any penalty. Each
+                    project undertaken has served as a valuable opportunity for our team to learn, innovate, and refine
+                    our strategies.
+                </p>
+                <p class="leading-7 font-medium text-lg mb-3 text-center">
+                    Believe me or not, I know how to tackle Google's new updates and get traffic on a fresh
+                    blog/website.
+                </p>
+                <p class="leading-7 font-medium text-lg mb-3 text-center">
+                    Still having doubts, here is some proofs..
+                </p>
+            </div>
+
+            <div data-aos="fade-up" class="proofs flex justify-center w-full m-5 my-10 overflow-hidden">
+                <swiper-container class="mySwiper" effect="cards" grab-cursor="true" loop="true">
+                    <swiper-slide><img src="assets/images/fb.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/insta1.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/insta2.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/pin.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/youtube.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/searchconsole.png" class="rounded-md"></swiper-slide>
+                    <swiper-slide><img src="assets/images/backlinks.webp" class="rounded-md"></swiper-slide>
+                </swiper-container>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners bg-gradient-to-tr from-[#a70707] to-[#121c63] text-white">
+        <div class="wrapper flex justify-between items-center">
+            <div data-aos="fade-up" 
+                class="content p-10 lg:px-20 text-center rounded-3xl w-full flex justify-center items-center flex-col gap-5">
+                <span class="font-bold text-3xl capitalize">
+                    Shaped my path
+                </span>
+                <span class="leading-7 font-medium text-lg mb-3 text-justify">
+                    Embarking on the journey of becoming an accomplished professional in the field of SEO services has
+                    been a transformative experience. Through years of dedicated learning, hands-on experience, and
+                    staying abreast of the ever-evolving digital landscape, I've honed my skills to navigate the complex
+                    realm of search engine optimization.
+                </span>
+                <span class="leading-7 font-medium text-lg mb-3 text-justify">
+                    What sets me apart is the continuous pursuit of knowledge and adaptability to the latest industry
+                    trends. Armed with a diverse set of tools and methodologies, I employ a strategic approach that
+                    encompasses keyword research, on-page optimization, content creation, and ethical link-building. The
+                    foundation of my success lies in a commitment to delivering results-driven SEO solutions tailored to
+                    meet the unique needs of each client.
+                </span>
+                <span class="leading-7 font-medium text-lg mb-3 text-justify">
+                    My journey is not just about rankings; it's about forging lasting partnerships and contributing to
+                    the online success stories of businesses across various industries. With a passion for achieving
+                    tangible and sustainable results, I bring a wealth of expertise to propel your digital presence to
+                    new heights.
+                </span>
+
+                <div class="workingWith w-full flex gap-5 flex-wrap justify-center items-center">
+
+                    <div data-aos="zoom-in-right" 
+                        class="withBrand relative w-full md:h-[400px] h-[250px] lg:w-[32%] lg:h-[250px] flex justify-center items-center overflow-hidden">
+                        <div class="imgContainer absolute h-full w-full rounded-xl">
+                            <img src="assets/images/logo-Blackhatworld.jpg" class="h-full w-full rounded-xl">
+                        </div>
+                        <div 
+                            class="brandDetail text-xs rounded-xl p-5 backdrop-blur-sm h-full w-full absolute flex justify-center items-center flex-col gap-2 translate-y-full transition-all ease-in-out delay-150 bg-gradient-to-b from-[#3f1a5e9f] to-[#0000009a]">
+                            <a href="https://www.blackhatworld.com/" target="_blank" class="flex flex-col items-center">
+                                <span class="Contentheader text-xl font-extrabold">
+                                    BlackHatWorld
+                                </span>
+                                <span class="ContentPara">
+                                    BlackHatWorld is an online forum that has gained notoriety for its discussions on
+                                    various digital marketing strategies, including both white hat and black hat
+                                    techniques. Launched in 2005, the platform serves as a meeting place for individuals
+                                    interested in SEO, affiliate marketing, social media marketing, and other online
+                                    monetization methods.
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" 
+                        class="withBrand relative w-full md:h-[400px] h-[250px] lg:w-[32%] lg:h-[250px] flex justify-center items-center overflow-hidden">
+                        <div class="imgContainer absolute h-full w-full rounded-xl">
+                            <img src="assets/images/logo-theytlab.png" class="h-full w-full rounded-xl">
+                        </div>
+                        <div
+                            class="brandDetail text-xs rounded-xl p-5 backdrop-blur-sm h-full w-full absolute flex justify-center items-center flex-col gap-2 translate-y-full transition-all ease-in-out delay-150 bg-gradient-to-b from-[#3f1a5e9f] to-[#0000009a]">
+                            <a href="https://theytlab.com/" target="_blank" class="flex flex-col items-center">
+                                <span class="Contentheader text-xl font-extrabold">
+                                    theytlab
+                                </span>
+                                <span class="ContentPara">
+                                    The YT Lab, is specialized in high retention views (up to 100%), advanced video SEO,
+                                    and genuine user engagement, including likes and comments. Their services, which
+                                    include real users and are tested on our own channels, ensure both visibility and
+                                    income generation. They prioritize privacy, and their strategies are not only
+                                    effective but also 100% safe.
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div data-aos="zoom-in-left" 
+                        class="withBrand relative w-full md:h-[400px] h-[250px] lg:w-[32%]  lg:h-[250px] flex justify-center items-center overflow-hidden">
+                        <div class="imgContainer absolute h-full w-full rounded-xl">
+                            <img src="assets/images/logo-semrush.jpg" class="h-full w-full rounded-xl">
+                        </div>
+                        <div
+                            class="brandDetail text-xs rounded-xl p-5 backdrop-blur-sm h-full w-full absolute flex justify-center items-center flex-col gap-2 translate-y-full transition-all ease-in-out delay-150 bg-gradient-to-b from-[#3f1a5e9f] to-[#0000009a]">
+                            <a href="https://www.semrush.com/" target="_blank" class="flex flex-col items-center">
+                                <span class="Contentheader text-xl font-extrabold">
+                                    Semrush
+                                </span>
+                                <span class="ContentPara">
+                                    SEMrush is a powerful digital marketing platform known for its comprehensive SEO
+                                    tools. It offers insights on keywords, competitor analysis, and site audits. With
+                                    features spanning SEO, PPC, social media, and content marketing, SEMrush is a
+                                    trusted resource for millions, providing a competitive edge in the digital
+                                    landscape.
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services bg-gradient-to-br from-[#a70707] to-[#121c63] text-white">
+        <div class="brands-carousals px-10 ">
+            <swiper-container class="brandsSwiper" init="false">
+                <swiper-slide><img class="brandImg" src="assets/images/facebookwhite.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/Logo-Instagram-1.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/pinterest-white.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/youtube-white.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/WordPress-white.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/analytics-white.png"></swiper-slide>
+                <swiper-slide><img class="brandImg" src="assets/images/console-white.png"></swiper-slide>
+            </swiper-container>
+        </div>
+        <div class="wrapper p-4 lg:px-24 h-full flex-col pt-10 flex justify-between items-center lg:gap-5">
+            <span class="font-bold text-3xl capitalize">How I can help you</span>
+            <div class="services flex w-full gap-2 justify-center flex-wrap">
+                <div
+                    class="serviceBtn part rounded-full lg:rounded block p-2 lg:p-5 w-fit md:w-[48%] lg:w-[24%]   bg-gradient-to-r hover:bg-gradient-to-t from-yellow-500 to-orange-600 text-blue-950 cursor-pointer hover:shadow-lg hover:shadow-orange-400">
+                    <span class="lg:font-semibold lg:text-xl"><i
+                            class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i>Improve
+                        SEO</span>
+                </div>
+                <div
+                    class="serviceBtn part rounded-full lg:rounded block p-2 lg:p-5 w-fit md:w-[48%] lg:w-[24%]   bg-gradient-to-r hover:bg-gradient-to-t from-yellow-500 to-orange-600 text-blue-950 cursor-pointer hover:shadow-lg hover:shadow-orange-400">
+                    <span class="lg:font-semibold lg:text-xl"><i
+                            class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i>Social Media
+                        Growth</span>
+                </div>
+            </div>
+
+            <div
+                class="transition-all delay-150 ease-in-out services-details h-[550px] lg:h-[250px] overflow-hidden relative border-2 rounded-md border-yellow-500 w-full p-4 mt-2">
+                <div
+                    class="transition-all delay-150 ease-in-out absolute seo-service flex flex-col gap-4 translate-x-0">
+                    <span class="para text-lg">
+                        As a SEO (Search Engine Optimization) specialists we offer a range of services aimed at
+                        improving a website's visibility and performance in search engine results. These services are
+                        designed to increase organic (non-paid) traffic, enhance the user experience, and boost the
+                        overall online presence of a website. Here are some common services provided by us:
+                    </span>
+                    <ul class="flex flex-wrap justify-center gap-3">
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Keyword
+                            Research</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> On-Page
+                            Opan</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Off-Page
+                            Opan</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i>
+                            Technical SEO</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Content
+                            Creation and Optimization</span></li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> SEO
+                            Audits</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Penalty
+                            Recovery</li>
+                    </ul>
+
+                </div>
+                <div
+                    class="transition-all delay-150 ease-in-out absolute smm-service flex flex-col gap-4 translate-x-[200%]">
+                    <span class="para text-lg">
+                        At Blackhatter99, we specialize in Social Media Growth Services, propelling your online presence
+                        with authentic audience engagement and increased visibility. Whether you're an influencer, small
+                        business, or established brand, our proven strategies ensure sustainable growth and meaningful
+                        connections across platforms.
+                    </span>
+
+                    <ul class="flex flex-wrap justify-center gap-3">
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Follower
+                            and Subscriber</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Viral
+                            Reels</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Like,
+                            Share and Comments</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i>
+                            Templates and Designs</li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i>
+                            Copywriting and Ghost Writing</span></li>
+                        <li class="title text-sm lg:text-lg font-semibold p-1 lg:p-2 px-4 border rounded-full"><i
+                                class="text-green-500 bg-white rounded-full fa-solid fa-circle-check mr-1"></i> Facebook
+                            Groups</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="offers-container flex flex-wrap justify-center gap-y-5 gap-3 w-full my-3">
+
+                <div data-aos="flip-up" data-aos-delay="100"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/facebook-color.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Facebook</span>
+                    <span>10K followers</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">19.99</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="150"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/facebook-color.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Facebook</span>
+                    <span>1000 min watch time</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">25.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="200"
+                    class="offers relative overflow-hidden w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <span
+                        class="absolute bg-green-600 px-10 p-2 -rotate-45 -left-10 -top-3 flex justify-end items-center flex-col">
+                        <i class="fa-solid fa-stars"></i> <span>Offer</span>
+                    </span>
+                    <img src="assets/images/instagram-color.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Instagram</span>
+                    <span>10K followers</span>
+
+                    <span class="flex gap-2">
+                        <span class="line-through text-blue-500 flex">$ <span
+                                class="text-white text-2xl">19.99</span></span>
+                        <span class="text-blue-500 flex">$ <span class="text-white text-2xl">9.99</span></span>
+                    </span>
+
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="250"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/TikTokcolor.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Tiktok</span>
+                    <span>10K Followers</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">15.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="300"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/xtwitter-color.webp" class="rounded h-10">
+                    <span class="text-lg font-semibold">X (Twitter)</span>
+                    <span>5K Tweets (Ghost Writing)</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">15.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/Pinterest-color.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Pinterest Business</span>
+                    <span>Account Optimisation</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">15.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="400"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/YouTubecolor.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">YouTube</span>
+                    <span>Likes, Share, Comments</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">15.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="450"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/WordPress-white.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">WordPress</span>
+                    <span>Website Optimisation</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">50.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="500"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/console-white.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Search Console</span>
+                    <span>SEO Optimisation</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">50.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="550"
+                    class="offers w-[48%] lg:w-[18%] flex justify-center items-center flex-col gap-1 backdrop-blur-md bg-gradient-to-br from-[#491717] to-[#050e85] border border-gray-600 rounded-md p-2 hover:shadow-2xl">
+                    <img src="assets/images/link.png" class="rounded h-10">
+                    <span class="text-lg font-semibold">Backlinks</span>
+                    <span>50 Do-Follow Backlinks</span>
+                    <span class="text-blue-500 flex">$ <span class="text-white text-2xl">25.00</span></span>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600 rounded-full p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold w-full">Buy</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section bg-gradient-to-bl from-[#121c63] to-[#a70707] text-white">
+        <div data-aos="fade-up" class="wrapper p-4 lg:px-24 h-full flex-col pt-10 flex justify-between items-center lg:gap-5">
+            <div class="about w-full mt-2 bg-[#0000001f] p-4">
+                <span class="text-5xl font-bold capitalize w-full block text-center mb-5">Frequently Asked <span
+                        class=" text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400">Questions</span></span>
+
+                <div class="faq-container flex gap-3 flex-col lg:flex-row text-white">
+                    <div class="part w-full lg:w-1/2">
+                        <div class="Ani-Chevro-Accordion w-full">
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>What is
+                                    Black Hat SEO? <i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    Black hat SEO refers to unethical strategies and techniques used to manipulate
+                                    search engine rankings. These tactics violate search engine guidelines and can lead
+                                    to penalties, including lower rankings or removal from search engine results.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>What are
+                                    some common Black Hat SEO techniques?<i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    Common black hat SEO techniques include keyword stuffing, cloaking, hidden text,
+                                    link farming, and content scraping. These methods aim to deceive search engines and
+                                    artificially boost a website's rankings.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>Why do
+                                    people use Black Hat SEO?<i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    People may resort to black hat SEO to quickly achieve higher search engine rankings
+                                    and increase website visibility. However, the gains are often short-lived, and the
+                                    risks of penalties can have severe consequences for a website's reputation and
+                                    performance.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>Does Using
+                                    Blackhatter99 SEO services penalize my Website?<i
+                                        class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    No, OfCourse not. Blackhatter99 has genuine techniques which show fast results and
+                                    are also ethical. So there is no chance that Search Engines will penalize your
+                                    Website.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part w-full lg:w-1/2">
+                        <div class="Ani-Chevro-Accordion w-full">
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>How can we
+                                    assist you in making money? <i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    We have paid thousands of dollars to our users who have shared our SMM panel with
+                                    their friends, and you can also make 5% with our affiliate service because it is
+                                    open to all, and anyone can use our SMM panel and benefit from our service.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>How Orders
+                                    are being filled quickly?<i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    After you place your order, simply sit back and let us handle the rest. We will
+                                    follow your campaign until it is completed and you are satisfied with our SMM
+                                    results.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>What makes
+                                    us the best SMM panel? <i class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    We've been providing social media services like Instagram likes, TikTok followers,
+                                    youtube views, twitch, Spotify, and Facebook likes for years. We work directly with
+                                    big companies, agencies, and individuals to provide them with the cheapest SMM
+                                    services our reseller panel has become the most popular SMM panel in the market.
+                                </span>
+                            </div>
+                            <div class="content">
+                                <span class='Heading bg-gradient-to-bl from-[#313fac] to-[#a70707] rounded'>Why do
+                                    people resort to Black Hat Social Media tactics?<i
+                                        class="fa fa-chevron-down Show"></i></span>
+                                <span class="answer">
+                                    Individuals or businesses may turn to black hat social media tactics to create an
+                                    illusion of popularity or influence, with the aim of attracting genuine followers or
+                                    customers. However, the risks include account suspension, loss of credibility, and
+                                    damage to brand reputation.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section bg-gradient-to-br from-[#a70707] to-[#121c63] text-white">
+        <div class="wrapper p-4 lg:px-24 h-full flex-col pt-10 flex items-center lg:gap-5">
+            <span class="font-bold text-3xl capitalize">Contact Us</span>
+            <div class="contact-container w-full flex gap-3 flex-col lg:flex-row text-white">
+                <div class="part w-full flex-col lg:w-1/2">
+                    <ul class="w-full flex flex-col gap-8">
+                        <li class="border p-3 flex items-center gap-3 w-full">
+                            <i class="w-[10%] text-3xl lg:text-5xl fa-solid fa-headset"></i>
+                            <span class="w-[50%] flex flex-col gap-1">
+                                <span class="head capitalize">Help Support</span>
+                                <span class="head capitalize">Got Questions? Here is the Answer</span>
+                            </span>
+                            <button
+                                class="w-[40%] hover:from-yellow-600 hover:to-orange-600  p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Help
+                                Center</button>
+                        </li>
+                        <li class="border p-3 flex items-center gap-3 w-full">
+                            <i class="w-[10%] text-3xl lg:text-5xl fa-solid fa-comments"></i>
+                            <span class="w-[50%] flex flex-col gap-1">
+                                <span class="head capitalize">Chat</span>
+                                <span class="head capitalize">Typically reply withinn minutes</span>
+                            </span>
+                            <button
+                                class="w-[40%] hover:from-yellow-600 hover:to-orange-600  p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Chat
+                                with Us</button>
+                        </li>
+                        <li class="border p-3 flex items-center gap-3 w-full">
+                            <i class="w-[10%] text-3xl lg:text-5xl fa-solid fa-envelope"></i>
+                            <span class="w-[50%] flex flex-col gap-1">
+                                <span class="head capitalize">Email</span>
+                                <span class="head capitalize">Typically reply within 48 hours</span>
+                            </span>
+                            <button
+                                class="w-[40%] hover:from-yellow-600 hover:to-orange-600  p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Email
+                                Us</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="part w-full flex flex-col lg:w-1/2 gap-3">
+                    <input type="text" class="bg-white rounded-full w-full p-3" placeholder="Full Name *">
+                    <input type="email" class="bg-white rounded-full w-full p-3" placeholder="Email Address *">
+                    <input type="text" class="bg-white rounded-full w-full p-3" placeholder="Subject">
+                    <textarea class="bg-white rounded-lg w-full p-3 h-40" placeholder="Your Message" name=""
+                        id=""></textarea>
+                    <button
+                        class="hover:from-yellow-600 hover:to-orange-600  p-3 px-10 rounded-full uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Submit
+                        Message</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border-t-2 border-gray-300 flex py-4 justify-center items-center text-center">
+            <span>All Rights Reseved <span id="year"></span> &copy; Blackhatter99 </span>
+        </footer>
+        <a class="fixed cursor-pointer z-40 bottom-6 right-6 h-10 w-10 rounded-full border-2 border-purple-400 bg-gradient-to-br from-[#a70707] to-[#121c63] text-white flex justify-center items-center opacity-0 hover:shadow-xl hover:shadow-pink-400"
+            onclick="bringToView('.hero')" id="BackToTop"><i class="fas fa-chevron-up"></i></a>
+    </section>
+
+    <div
+        class="lightbox bg-[#000000ad] backdrop-blur-md z-50 fixed top-0 left-0 w-full h-screen justify-center items-center hidden">
+        <div onclick="triggerLightBox()"
+            class="closeBtn absolute right-0 top-0 cursor-pointer hover:bg-[#7a2020] bg-[#d34d4d] text-white w-10 h-10 flex justify-center items-center">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div
+            class="modalContent form p-10 w-[90%] lg:w-1/2 rounded-lg shadow-lg justify-center items-center bg-white hidden">
+
+            <form class="w-full">
+                <span class="heading text-xl text-center font-bold">
+                    Sign Up
+                </span>
+                <div class="nameContainer flex gap-3 w-full flex-col lg:flex-row">
+                    <div class="mb-6 w-full lg:w-[48%]">
+                        <label for="fName" class="block mb-2 text-sm font-medium text-gray-900">First Name</label>
+                        <input type="text" id="fName"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                            required>
+                    </div>
+
+                    <div class="mb-6 w-full lg:w-[48%]">
+                        <label for="lName" class="block mb-2 text-sm font-medium text-gray-900">Last Name</label>
+                        <input type="text" id="lName"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                            required>
+                    </div>
+
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                    <input type="email" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        placeholder="name@example.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+                    <input type="password" id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                        required>
+                </div>
+                <div class="flex items-start mb-6">
+                    <div class="flex items-center h-5">
+                        <input id="remember" type="checkbox" value=""
+                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
+                            required>
+                    </div>
+                    <label for="remember" class="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                </div>
+                <button type="submit"
+                    class="bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div
+        class="sidebar Cart fixed right-0 rounded-l-lg top-0 h-screen w-4/5 lg:w-1/2 backdrop-blur-sm bg-[#423939ab] z-50 border-l-2  flex justify-center items-center flex-col text-white transition-all delay-500 ease-in-out translate-x-full">
+        <div onclick="triggerCart('.sidebar.Cart')"
+            class="closeBtn absolute right-0 top-0 cursor-pointer hover:bg-[#7a2020] bg-[#d34d4d] text-white w-10 h-10 flex justify-center items-center">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="wrapper p-4 lg:px-12 h-full flex-col pt-10 flex items-center lg:gap-5">
+            <span class="font-bold text-3xl capitalize">
+                Cart
+            </span>
+
+            <div class="items flex flex-col gap-2 w-full max-h-[60%] overflow-auto">
+                <ul class="w-full flex flex-col gap-2">
+                    <li class="border border-l-0 border-r-0 p-3 flex items-center gap-3 w-full">
+                        <img src="assets/images/facebook-color.png" class="w-[10%] text-3xl lg:text-5xl">
+                        <span class="w-[50%] flex flex-col gap-1">
+                            <span class="head font-semibold capitalize">Facebook</span>
+                            <span class="head capitalize">10K followers</span>
+                        </span>
+                        <span
+                            class="w-[20%] flex justify-center text-center hover:from-yellow-600 hover:to-orange-600  p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">$19.99</span>
+                        <i class="w-[20%] flex justify-center cursor-pointer fa-regular fa-circle-xmark"></i>
+                    </li>
+
+                    <li class="border border-l-0 border-r-0 p-3 flex items-center gap-3 w-full">
+                        <img src="assets/images/YouTubecolor.png" class="w-[10%] text-3xl lg:text-5xl">
+                        <span class="w-[50%] flex flex-col gap-1">
+                            <span class="head font-semibold capitalize">YouTube</span>
+                            <span class="head capitalize">Likes, Share, Comments</span>
+                        </span>
+                        <span
+                            class="w-[20%] flex justify-center text-center hover:from-yellow-600 hover:to-orange-600  p-2 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">$15.00</span>
+                        <i class="w-[20%] flex justify-center cursor-pointer fa-regular fa-circle-xmark"></i>
+                    </li>
+                </ul>
+            </div>
+            <span class="cartMessage leading-7 font-medium text-lg mb-3 text-justify hidden">
+                * Note- Login/create account to proceed with checkout
+            </span>
+            <button onclick="showMessage()"
+                class="mt-2 hover:from-yellow-600 hover:to-orange-600 rounded-full p-3 px-10 uppercase bg-gradient-to-r from-yellow-500 to-orange-600 text-blue-950 font-bold">Check
+                Out</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
+
+<!-- 
+    Instagram
+    Facebook
+    X (Formnerly Twitter)
+    Pinterest
+    YouTube
+
+    Website Speed Optimisation
+    Comment Backlinks
+    Keywords Analysis and Targeting
+    Ranking among Compitetors
+    Backlinks for DA
+ -->
